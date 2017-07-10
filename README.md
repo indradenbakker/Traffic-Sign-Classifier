@@ -26,9 +26,11 @@ We can immediately notice some of the challenges that arise with the given datas
 ### Model building (see [Jupyter Notebook](https://github.com/indradenbakker/Traffic-Sign-Classifier/blob/master/notebook/Traffic%20Sign%20Classifier%20-%20Data%20Analysis%20%26%20Model%20Training.ipynb))
 We've chosen to apply image augmentations to our training data before feeding them to the network. This will make our model more robust to different inputs. We've also chosen to only use the grayscale of images. This to speed up computations during training, but especially during inference. The reason is that we want to try to combine a high accuracy with real-time performance. 
 
+![alt tag](https://github.com/indradenbakker/Traffic-Sign-Classifier/blob/master/images/training%20results.png?raw=true)
+
 The model consists of 3 convolutional blocks and two fully connected layers. To reduce overfitting, we've applied regularisation techniques like dropout and max pooling. This is a  basic model, and can be tuned further for optimum performance. The goal of this model is to provide a solution that gives a relatively high accuracy (> 97%) on the validation set and should be seen as a stepping stone for further development. 
 
-### REST API (see [script]()
+### REST API (see [script](https://github.com/indradenbakker/Traffic-Sign-Classifier/blob/master/inference_endpoint.py))
 To make our model available for other applications, we've created a REST API endpoint in Python with Flask. Currently, the REST API is deployed on a Amazon AWS instance and other applications can send POST request including a URL of an image that included a traffic sign. The endpoint will return the predicted class of the image. For example:
 
 `curl -X POST http://127.0.0.1:5000/predict/https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Spain
