@@ -31,7 +31,7 @@ We've chosen to apply image augmentations to our training data before feeding th
 The model consists of 3 convolutional blocks and two fully connected layers. To reduce overfitting, we've applied regularisation techniques like dropout and max pooling. This is a  basic model, and can be tuned further for optimum performance. The goal of this model is to provide a solution that gives a relatively high accuracy (> 97%) on the validation set and should be seen as a stepping stone for further development. 
 
 ### REST API (see [script](https://github.com/indradenbakker/Traffic-Sign-Classifier/blob/master/inference_endpoint.py))
-To make our model available for other applications, we've created a REST API endpoint in Python with Flask. Currently, the REST API is deployed on a Amazon AWS instance and other applications can send POST request including a URL of an image that included a traffic sign. The endpoint will return the predicted class of the image. For example:
+To make our model available for other applications, we've created a REST API endpoint in Python with Flask. Currently, the REST API is deployed on a Amazon AWS instance and other applications can send POST request including a URL of an image that include a traffic sign. The endpoint will return the predicted class of the image. For example:
 
 `curl -X POST http://127.0.0.1:5000/predict/https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Spain
 _traffic_signal_p2.svg/218px-Spain_traffic_signal_p2.svg.png`
