@@ -1,6 +1,6 @@
 # Traffic Sign Classifier
 
-For this project we will be using the [German Traffic Sign dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). Specifically, we will be using a pickled version of the dataset provided by [Udacity](www.udacity.com) ([download](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip)). The project can be devided in three parts: data exploration, model building, and REST API for inference. Below we describe these three parts in more detail. 
+For this project we will be using the [German Traffic Sign dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). Specifically, we will be using a pickled version of the dataset provided by [Udacity](www.udacity.com) ([download](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip)). The project can be divided in three parts: data exploration, model building, and REST API for inference. Below we describe these three parts in more detail. 
 
 Important dependencies:
 - Python 3.5.2
@@ -39,3 +39,11 @@ _traffic_signal_p2.svg/218px-Spain_traffic_signal_p2.svg.png`
   "prediction": "Children crossing"
 }
 `
+
+### Discussion
+
+There is clearly room for improvement. Some ideas to improve the project further:
+* Include all channels of the images.
+* Add more augmentations and rondomly apply augmentations on the fly instead of loading them in memory. 
+* Increase the complexity of the network and add skip layers to speed up inference time.
+* Provide a more scalable REST API.
